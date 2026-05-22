@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter', sans-serif;
+    background:#111;
+    color:#f5f5f5;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(90deg,#1a1a1a,#2b2b2b);
+    padding:20px 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+    box-shadow:0 5px 20px rgba(0,0,0,0.5);
+}
+
+header h1{
+    font-family:'Playfair Display', serif;
+    font-size:32px;
+    letter-spacing:2px;
+    color:#fff;
+}
+
+#logo{
+    border-radius:50%;
+    background:#fff;
+    padding:5px;
+}
+
+/* PESQUISA */
+
+.pesquisa{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.pesquisa input{
+    width:180px;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#2a2a2a;
+    color:white;
+}
+
+/* BOTÕES */
+
+.botoes{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+button{
+    background:#000;
+    color:#fff;
+    border:1px solid #444;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:500;
+    transition:.3s;
+}
+
+button:hover{
+    background:#333;
+    transform:translateY(-2px);
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+/* CARDS */
+
+main{
+    max-width:1200px;
+    margin:40px auto;
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    justify-content:center;
+    padding:0 20px;
+}
+
+.box{
+    width:260px;
+    background:#1c1c1c;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.5);
+    transition:.3s;
+    padding:20px;
+    text-align:center;
+    border:1px solid #333;
+}
+
+.box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.7);
+}
+
+.box i{
+    font-size:70px;
+    color:#fff;
+    margin-bottom:15px;
+}
+
+.nome{
+    font-family:'Playfair Display', serif;
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:10px;
+    color:#fff;
+}
+
+.box p{
+    margin-bottom:8px;
+    color:#ccc;
+}
+
+/* MODAL */
+
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.oculto{
+    display:none;
+}
+
+.janela{
+    background:#1a1a1a;
+    width:420px;
+    max-height:90vh;
+    overflow:auto;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.7);
+    border:1px solid #444;
+}
+
+.janela h2{
+    font-family:'Playfair Display', serif;
+    margin-bottom:15px;
+    text-align:center;
+    color:#fff;
+}
+
+/* FORMULÁRIOS */
+
+label{
+    font-weight:500;
+    margin-top:10px;
+    display:block;
+    color:#ddd;
+}
+
+input,
+select{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:6px;
+    border:1px solid #444;
+    background:#2a2a2a;
+    color:white;
+    outline:none;
+}
+
+input:focus,
+select:focus{
+    border:1px solid #fff;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:700px){
+
+    header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .botoes,
+    .pesquisa{
+        justify-content:center;
+    }
+
+    main{
+        padding:20px;
+    }
+
+    .janela{
+        width:100%;
+    }
+
+}

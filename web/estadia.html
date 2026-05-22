@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadias - Estacionamento ACME</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+
+        <img width="70" id="logo"
+            src="https://cdn-icons-png.flaticon.com/512/744/744465.png">
+
+        <h1>Estadias</h1>
+
+        <div class="botoes">
+
+            <button onclick="cadastro.classList.remove('oculto')">
+                Nova Estadia
+            </button>
+
+            <a href="index.html">
+
+                <button>
+                    Voltar Veículos
+                </button>
+
+            </a>
+
+        </div>
+
+    </header>
+
+    <main id="cards"></main>
+
+    <!-- MODAL CADASTRO -->
+
+    <div id="cadastro" class="modal oculto">
+
+        <div class="janela">
+
+            <h2>Cadastrar Estadia</h2>
+
+            <form id="formCad">
+
+                <label>Placa</label>
+                <input type="text" id="placa" required>
+
+                <label>Valor por Hora</label>
+                <input type="number" id="valorHora" required>
+
+                <br><br>
+
+                <button type="reset"
+                    onclick="cadastro.classList.add('oculto')">
+
+                    Cancelar
+
+                </button>
+
+                <button type="submit">
+
+                    Salvar
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL DETALHES -->
+
+    <div id="detalhes" class="modal oculto">
+
+        <div class="janela">
+
+            <h2 id="tituloEstadia"></h2>
+
+            <p><b>Placa</b></p>
+            <input type="text" id="placaEdit" disabled>
+
+            <p><b>Entrada</b></p>
+            <input type="text" id="entradaEdit" disabled>
+
+            <p><b>Saída</b></p>
+            <input type="datetime-local" id="saidaEdit">
+
+            <p><b>Valor Hora</b></p>
+            <input type="number" id="valorHoraEdit" disabled>
+
+            <p><b>Valor Total</b></p>
+            <input type="number" id="valorTotalEdit" disabled>
+
+            <br><br>
+
+            <button onclick="salvarEdicao()">
+                Finalizar Estadia
+            </button>
+
+            <button onclick="excluirEstadiaAtual()">
+                Excluir
+            </button>
+
+            <button onclick="detalhes.classList.add('oculto')">
+                Fechar
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script1.js"></script>
+
+</body>
+
+</html>
